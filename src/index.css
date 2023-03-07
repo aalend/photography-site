@@ -1,0 +1,44 @@
+@tailwind base;
+
+@layer base {
+	body {
+		@apply bg-soft-amber-300 font-roboto text-lg text-woodsmoke-900;
+	}
+
+	h1,
+	h2,
+	h3 {
+		@apply font-grunge;
+	}
+
+	#root {
+		@apply flex min-h-screen flex-col;
+	}
+
+	footer {
+		@apply mt-auto;
+	}
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.text-full-width {
+		text-align: justify;
+		text-transform: uppercase;
+	}
+
+	.text-full-width:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+/* --- */
+@font-face {
+	font-family: 'grunge';
+	src: url('/fonts/grunge-font.ttf');
+	font-style: normal;
+}
